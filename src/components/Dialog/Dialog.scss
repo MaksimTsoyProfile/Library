@@ -1,0 +1,55 @@
+.dialog {
+  &-container {
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    &.show {
+      display: flex;
+    }
+  }
+  &-content {
+    background-color: #fff;
+    border-radius: 7px;
+    flex: 0 0 98%;
+    @media (min-width: 576px) {
+      flex: 0 0 75%;
+    }
+    @media (min-width: 992px) {
+      flex: 0 0 60%;
+    }
+    @media (min-width: 1200px) {
+      flex: 0 0 50%;
+    }
+  }
+  &-header {
+    box-sizing: border-box;
+    padding: 20px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-close-button {
+    margin-right: 5px;
+  }
+  &-body {
+    padding: 20px 15px;
+    &-text {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+  &-footer {
+    border-top: 1px solid grey;
+    padding: 20px 15px;
+    text-align: right;
+  }
+}
